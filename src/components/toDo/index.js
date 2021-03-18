@@ -8,13 +8,14 @@ class ToDo extends Component {
   super(props);
 
   this.state = { isEditing: false, newValue: '' };
+
   this.editButtonHandle = this.editButtonHandle.bind(this);
   this.saveEditForm = this.saveEditForm.bind(this);
   this.updateState = this.updateState.bind(this);
  }
 
  editButtonHandle() {
-  this.setState({ isEditing: true });
+  this.setState({ isEditing: true, newValue: this.props.task });
  }
 
  updateState(evt) {
@@ -23,6 +24,9 @@ class ToDo extends Component {
 
  saveEditForm(evt) {
   evt.preventDefault();
+  if (!this.state.newValue) {
+   return this.props.remove(this.props.id);
+  }
   this.props.editListState(this.props.id, this.state.newValue);
   this.setState({ isEditing: false });
  }
