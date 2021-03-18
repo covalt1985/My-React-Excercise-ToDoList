@@ -1,7 +1,6 @@
 import React, { Component } from 'react';
 
 import NewToDoForm from '../newToDoForm/index';
-import ListButtons from '../listButtons/index';
 import ToDo from '../toDo/index';
 import './style.css';
 
@@ -14,20 +13,45 @@ class ToDoList extends Component {
   };
 
   this.addToDo = this.addToDo.bind(this);
+  this.remove = this.remove.bind(this);
+  this.editState = this.editState.bind(this);
  }
 
  addToDo(newToDo) {
-  this.setState((curSt) => ({
+  this.setState(curSt => ({
    toDo: [...curSt.toDo, newToDo],
   }));
  }
 
+ remove(id) {
+  this.setState(curSt => ({
+   toDo: curSt.toDo.filter(item => {
+    return item.id !== id;
+   }),
+  }));
+ }
+
+ editState(id, newValue) {
+  const editedToDo = this.state.toDo.map(el => {
+   if (el.id === id) {
+    el.task = newValue;
+   }
+   return el;
+  });
+
+  this.setState({ toDo: editedToDo });
+ }
+
  render() {
-  const toDo = this.state.toDo.map((toDo) => {
+  const toDo = this.state.toDo.map(toDo => {
    return (
-    <div className="item">
-     <ToDo item={toDo.task} />
-     <ListButtons func="edit" /> <ListButtons func="delete" />
+    <div key={toDo.id}>
+     <ToDo
+      task={toDo.task}
+      id={toDo.id}
+      remove={this.remove}
+      editListState={this.editState}
+     />
     </div>
    );
   });
