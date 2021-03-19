@@ -1,0 +1,22 @@
+{
+  "files": {
+    "main.css": "/My-React-Excercise-ToDoList/static/css/main.1d379908.chunk.css",
+    "main.js": "/My-React-Excercise-ToDoList/static/js/main.d9e7764a.chunk.js",
+    "main.js.map": "/My-React-Excercise-ToDoList/static/js/main.d9e7764a.chunk.js.map",
+    "runtime-main.js": "/My-React-Excercise-ToDoList/static/js/runtime-main.21e3c9cb.js",
+    "runtime-main.js.map": "/My-React-Excercise-ToDoList/static/js/runtime-main.21e3c9cb.js.map",
+    "static/js/2.a780d594.chunk.js": "/My-React-Excercise-ToDoList/static/js/2.a780d594.chunk.js",
+    "static/js/2.a780d594.chunk.js.map": "/My-React-Excercise-ToDoList/static/js/2.a780d594.chunk.js.map",
+    "static/js/3.504dd8c0.chunk.js": "/My-React-Excercise-ToDoList/static/js/3.504dd8c0.chunk.js",
+    "static/js/3.504dd8c0.chunk.js.map": "/My-React-Excercise-ToDoList/static/js/3.504dd8c0.chunk.js.map",
+    "index.html": "/My-React-Excercise-ToDoList/index.html",
+    "static/css/main.1d379908.chunk.css.map": "/My-React-Excercise-ToDoList/static/css/main.1d379908.chunk.css.map",
+    "static/js/2.a780d594.chunk.js.LICENSE.txt": "/My-React-Excercise-ToDoList/static/js/2.a780d594.chunk.js.LICENSE.txt"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.21e3c9cb.js",
+    "static/js/2.a780d594.chunk.js",
+    "static/css/main.1d379908.chunk.css",
+    "static/js/main.d9e7764a.chunk.js"
+  ]
+}
