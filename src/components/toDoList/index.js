@@ -13,7 +13,7 @@ class ToDoList extends Component {
   };
 
   this.addToDo = this.addToDo.bind(this);
-  this.remove = this.remove.bind(this);
+  this.removeToDo = this.removeToDo.bind(this);
   this.editState = this.editState.bind(this);
  }
 
@@ -23,7 +23,7 @@ class ToDoList extends Component {
   }));
  }
 
- remove(id) {
+ removeToDo(id) {
   this.setState(curSt => ({
    toDo: curSt.toDo.filter(item => {
     return item.id !== id;
@@ -49,7 +49,7 @@ class ToDoList extends Component {
      <ToDo
       task={toDo.task}
       id={toDo.id}
-      remove={this.remove}
+      remove={this.removeToDo}
       editListState={this.editState}
      />
     </div>
@@ -57,9 +57,10 @@ class ToDoList extends Component {
   });
 
   return (
-   <div>
-    <h2>Todo List!</h2>
-    <p>A simple react Todo app</p>
+   <div className="toDoList">
+    <h2>
+     Todo List! <span>React app</span>
+    </h2>
     <ul>{toDo}</ul>
     <NewToDoForm addToDo={this.addToDo} />
    </div>

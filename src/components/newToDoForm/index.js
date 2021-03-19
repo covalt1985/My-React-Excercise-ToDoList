@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import uuid from 'uuid/dist/v4';
 
+import './style.css';
+
 class NewToDoForm extends Component {
  constructor(props) {
   super(props);
@@ -27,10 +29,11 @@ class NewToDoForm extends Component {
  render() {
   return (
    <div>
-    <form onSubmit={this.handleAddingNewToDo}>
+    <form className="newToDoForm" onSubmit={this.handleAddingNewToDo}>
      <label htmlFor="task">New Todo</label>
 
      <input
+      autoFocus
       id="task"
       type="text"
       name="task"

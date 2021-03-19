@@ -13,7 +13,9 @@ class ListButtons extends Component {
  render() {
   return (
    <div>
-    <button onClick={this.handleClick}>{this.props.func}</button>
+    <button className="button" onClick={this.handleClick}>
+     {this.props.func}
+    </button>
    </div>
   );
  }
